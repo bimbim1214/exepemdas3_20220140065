@@ -70,13 +70,13 @@ public:
 	~buku() {
 		cout << "pengarang \"" << nama << "\" tidak ada\n";
 	}
+	void tambahpengarang(pengarang*);
+	void cetakpengarang();
 }
 void buku::tambahpengarang(pengarang* pPengarang) {
 	daftar_pengarang.push_back(pPengarang);
-	pPengarang->tambahpengarang(this);
+	pPengarang->tambahbuku(this->nama);
 
-	void tambahpengarang(pengarang*);
-	void cetakbuku();
 };
 
 int main() {
